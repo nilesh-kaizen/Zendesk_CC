@@ -1,0 +1,22 @@
+<head>
+    <script>
+    function goBack() {
+        window.history.back()
+    }
+</script>
+</head>
+<body>
+<hr>
+<ul>
+<h4>
+    <strong>
+        Ticket No - {{data['ticket']['id']}}
+    </strong>
+</h4>
+    <li>Subject - {{data['ticket']['subject']}}</li><br>
+    <li>Description - {{data['ticket']['description']}}</li><br>
+    <button onclick="goBack()">Go Back</button>
+
+</ul>
+<hr>
+</body>

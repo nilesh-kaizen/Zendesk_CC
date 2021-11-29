@@ -1,0 +1,21 @@
+<body>
+<h4>
+    <strong>
+        Ticket Viewer
+    </strong>
+</h4>
+<hr>
+<ul>
+    {% for item in data %}
+        <li>{{item.description}}</li>
+        <a href="/individualticket/{{item.id}}">View Ticket</a><br><br>
+    {% endfor %}
+    {% if current_page > 0  %}
+        <button><a href="/{{current_page - 1}}">Previous</a></button>
+    {% endif %}
+    {% if total_pages - 1 > current_page  %}
+        <button><a href="/{{current_page + 1}}">Next</a></button>
+    {% endif %}
+</ul>
+<hr>
+</body>
